@@ -13,7 +13,7 @@ dependencies = [
 [[package]]
 name = "rouille"
 version = "0.1.0"
-source = "git+https://github.com/VilotStar/rouille#52dfc1dc3006753e8d977abc699d25af0f26b5bb"
+source = "git+https://github.com/VilotStar/rouille#3f18a5de27982054f3e00993f85d4199466bafdc"
 dependencies = [
  "rouille_compilogenese",
 ]
@@ -21,7 +21,7 @@ dependencies = [
 [[package]]
 name = "rouille_compilogenese"
 version = "0.1.0"
-source = "git+https://github.com/VilotStar/rouille#52dfc1dc3006753e8d977abc699d25af0f26b5bb"
+source = "git+https://github.com/VilotStar/rouille#3f18a5de27982054f3e00993f85d4199466bafdc"
 
 [[package]]
 name = "sabi"
