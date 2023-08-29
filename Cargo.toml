@@ -1,0 +1,8 @@
+[package]
+name = "adventofcode"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rouille = { git = "https://github.com/VilotStar/rouille" }
+sabi = { git = "https://github.com/VilotStar/sabi" }
