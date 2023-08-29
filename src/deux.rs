@@ -24,9 +24,9 @@ réalisation Main {
         soit valeur_soi = (valeur_contre + résultat + 2) % 3;
 
         renvoie selon soi {
-            Main::Rocher => (valeur_soi + 1 + 0).vers(),
-            Main::Papier => (valeur_soi + 1 + 3).vers(),
-            Main::Ciseaux => (valeur_soi + 1 + 6).vers()
+            Main::Rocher => (valeur_soi + 1 + 0).vers(), // Perdu
+            Main::Papier => (valeur_soi + 1 + 3).vers(), // Même
+            Main::Ciseaux => (valeur_soi + 1 + 6).vers() // Gagner
         }
     }
 
