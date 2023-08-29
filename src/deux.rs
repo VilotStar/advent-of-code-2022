@@ -2,9 +2,9 @@ rouille::rouille! {
     constant ENTRÉE: &chaîne = inclure_chaîne!("deux.txt");
 
     énumération Main {
-        Rocher,
-        Papier,
-        Ciseaux
+        Rocher, // Perdu
+        Papier, // Même
+        Ciseaux // Gagner
     }
 
     réalisation Main {
@@ -17,7 +17,27 @@ rouille::rouille! {
             }
         }
 
-        fonction score(&soi, contre: Main) -> nsentier {
+        fonction score_deux(&soi, contre: &Main) -> nsentier {
+            selon soi {
+                Main::Rocher => selon contre { // Perdu
+                    Main::Rocher => renvoie 0 + 3,
+                    Main::Papier => renvoie 0 + 1,
+                    Main::Ciseaux => renvoie 0 + 2
+                },
+                Main::Papier => selon contre { // Même
+                    Main::Rocher => renvoie 3 + 1,
+                    Main::Papier => renvoie 3 + 2,
+                    Main::Ciseaux => renvoie 3 + 3
+                },
+                Main::Ciseaux => selon contre { // Gagner
+                    Main::Rocher => renvoie 6 + 2,
+                    Main::Papier => renvoie 6 + 3,
+                    Main::Ciseaux => renvoie 6 + 1
+                }
+            }
+        }
+
+        fonction score(&soi, contre: &Main) -> nsentier {
             selon soi {
                 Main::Rocher => selon contre {
                     Main::Rocher => renvoie 3 + 1,
@@ -41,6 +61,7 @@ rouille::rouille! {
     public fonction principale() {
         soit jeux = ENTRÉE.diviser("\r\n");
         soit mutable totale = 0;
+        soit mutable totale_deux = 0;
         
         pour jeu de jeux {
             soit diviser: Tableau<&chaîne> = jeu.diviser(" ").collecter();
@@ -48,10 +69,14 @@ rouille::rouille! {
             soit gauche = Main::nouveaux(diviser[0]);
             soit droite = Main::nouveaux(diviser[1]);
 
-            soit score = droite.score(gauche);
+            soit score = droite.score(&gauche);
             totale += score;
+
+            soit score_deux = droite.score_deux(&gauche);
+            totale_deux += score_deux;
         }
 
         affiche!("{}", totale);
+        affiche!("{}", totale_deux);
     }
 }
