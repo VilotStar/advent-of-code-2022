@@ -41,7 +41,7 @@ réalisation Main {
             Main::Papier => (résultat + 2).vers(),
             Main::Ciseaux => (résultat + 3).vers()
         }
-    } // Je pense s'il est possible d'utiliser un décalage de bits 
+    }
 }
 
 public fonction principale() {
