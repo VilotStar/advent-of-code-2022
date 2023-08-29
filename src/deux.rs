@@ -19,8 +19,8 @@ réalisation Main {
     }
 
     fonction score_deux(&soi, contre: &Main) -> nsentier {
-        soit résultat = *soi as u8;
-        soit valeur_contre = *contre as u8;
+        soit résultat = *soi comme u8;
+        soit valeur_contre = *contre comme u8;
         soit valeur_soi = (valeur_contre + résultat + 2) % 3;
 
         renvoie selon soi {
@@ -31,8 +31,8 @@ réalisation Main {
     }
 
     fonction score(&soi, contre: &Main) -> nsentier {
-        soit valeur_soi = *soi as u8;
-        soit valeur_contre = *contre as u8;
+        soit valeur_soi = *soi comme u8;
+        soit valeur_contre = *contre comme u8;
         soit match_résultat = (valeur_soi - valeur_contre + 4) % 3;
         soit résultat = match_résultat * 3;
 
