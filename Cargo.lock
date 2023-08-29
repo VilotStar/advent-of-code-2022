@@ -6,9 +6,15 @@ version = 3
 name = "adventofcode"
 version = "0.1.0"
 dependencies = [
+ "rdza",
  "rouille",
  "sabi",
 ]
+
+[[package]]
+name = "rdza"
+version = "0.1.0"
+source = "git+https://github.com/VilotStar/rdza#d82ce70255b2c126eb1d67b608ad43dd433bda93"
 
 [[package]]
 name = "rouille"
