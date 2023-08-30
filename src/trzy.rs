@@ -26,7 +26,7 @@ publiczny funkcja główny() {
             continue;
         }
 
-        let znaki_wspólne_grupa: znakc = obecna_grupa[0].znakic()
+        /* let znaki_wspólne_grupa: znakc = obecna_grupa[0].znakic()
             .filtr(|&znak| {
                 dla i w 1..3 {
                     if !obecna_grupa[i].zawiera(znak) {
@@ -35,11 +35,11 @@ publiczny funkcja główny() {
                 }
                 prawda
             })
-            .nty(0).odpakuj();
-
-        /* let znaki_wspólne_grupa: znakc = obecna_grupa[0].znakic()
-            .filtr(|&znak| obecna_grupa[1].zawiera(znak) && obecna_grupa[2].zawiera(znak))
             .nty(0).odpakuj(); */
+
+        let znaki_wspólne_grupa: znakc = obecna_grupa[0].znakic()
+            .filtr(|&znak| obecna_grupa[1].zawiera(znak) && obecna_grupa[2].zawiera(znak))
+            .nty(0).odpakuj(); // szybciej niż w pętli
 
         if znaki_wspólne.jest_niższy() { // ord('a') == 97, 97 - 96 = 1
             priorytet_suma_grupa += znaki_wspólne_grupa as ucałkowita - 96;
