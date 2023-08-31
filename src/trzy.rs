@@ -1,27 +1,27 @@
 rdza::rdza! {
-stały WEJŚCIE: &ciąg = zawierać_ciąg!("trzy.txt");
+stały WEJŚCIE: &strunowy = zawierać_ciąg!("trzy.txt");
 
-publiczny funkcja główny() {
-    niech plecaki = WEJŚCIE.podział("\r\n");
-    niech zmienny priorytet_suma: ucałkowita = 0;
+publiczny funkcjonować główny() {
+    pozwalać plecaki = WEJŚCIE.podział("\r\n");
+    pozwalać zmienny priorytet_suma: unumer = 0;
 
-    niech zmienny priorytet_suma_grupa: ucałkowita = 0;
-    niech zmienny obecna_grupa: [Ciąg; 3] = Default::default();
+    pozwalać zmienny priorytet_suma_grupa: unumer = 0;
+    pozwalać zmienny obecna_grupa: [Strunowy; 3] = Default::default();
 
-    dla (indeks, plecak) w plecaki.wyliczać() {
-        niech (przedział_pierwszy, przedział_drugi) = plecak.podział_na(plecak.długość() / 2);
+    dle (indeks, plecak) w plecaki.wyliczać() {
+        pozwalać (przedział_pierwszy, przedział_drugi) = plecak.podzielić_o_godz(plecak.długość() / 2);
 
-        niech znaki_wspólne: znakc = przedział_pierwszy.znakic()
+        pozwalać znaki_wspólne: zwęglać = przedział_pierwszy.znaki()
             .filtr(|&znak| przedział_drugi.zawiera(znak))
-            .nty(0).odpakuj();
+            .nty(0).odwijaćsię();
 
-        jeżeli znaki_wspólne.jest_niższy() { // ord('a') == 97, 97 - 96 = 1
-            priorytet_suma += znaki_wspólne jako ucałkowita - 96;
-        } inaczej {                         // ord('A') == 65, 65 - 64 = 1, ponieważ wielkie litery, 1 + 26 == 27
-            priorytet_suma += znaki_wspólne jako ucałkowita - 64 + 26;
+        jeśli znaki_wspólne.jest_małe_litery() { // ord('a') == 97, 97 - 96 = 1
+            priorytet_suma += znaki_wspólne jak unumer - 96;
+        } inny {                         // ord('A') == 65, 65 - 64 = 1, ponieważ wielkie litery, 1 + 26 == 27
+            priorytet_suma += znaki_wspólne jak unumer - 64 + 26;
         }
 
-        obecna_grupa[indeks % 3] = plecak.do_łańcucha();
+        obecna_grupa[indeks % 3] = plecak.do_sznurka();
         if indeks % 3 != 2 {
             kontynuować;
         }
@@ -37,18 +37,18 @@ publiczny funkcja główny() {
             })
             .nty(0).odpakuj(); */
 
-        niech znaki_wspólne_grupa: znakc = obecna_grupa[0].znakic()
+        pozwalać znaki_wspólne_grupa: zwęglać = obecna_grupa[0].znaki()
             .filtr(|&znak| obecna_grupa[1].zawiera(znak) && obecna_grupa[2].zawiera(znak))
-            .nty(0).odpakuj(); // szybciej niż w pętli
+            .nty(0).odwijaćsię(); // szybciej niż w pętli
 
-        jeżeli znaki_wspólne.jest_niższy() { // ord('a') == 97, 97 - 96 = 1
-            priorytet_suma_grupa += znaki_wspólne_grupa jako ucałkowita - 96;
-        } inaczej {                         // ord('A') == 65, 65 - 64 = 1, ponieważ wielkie litery, 1 + 26 == 27
-            priorytet_suma_grupa += znaki_wspólne_grupa jako ucałkowita - 64 + 26;
+        jeśli znaki_wspólne.jest_małe_litery() { // ord('a') == 97, 97 - 96 = 1
+            priorytet_suma_grupa += znaki_wspólne_grupa jak unumer - 96;
+        } inny {                         // ord('A') == 65, 65 - 64 = 1, ponieważ wielkie litery, 1 + 26 == 27
+            priorytet_suma_grupa += znaki_wspólne_grupa jak unumer - 64 + 26;
         }
     }
 
-    drukujln!("{:?}", priorytet_suma);
-    drukujln!("{:?}", priorytet_suma_grupa);
+    wydrukowaćln!("{:?}", priorytet_suma);
+    wydrukowaćln!("{:?}", priorytet_suma_grupa);
 }
 }

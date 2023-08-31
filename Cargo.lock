@@ -14,22 +14,14 @@ dependencies = [
 [[package]]
 name = "rdza"
 version = "0.1.0"
-source = "git+https://github.com/VilotStar/rdza#c2cafa005e2970d37f2a0e1fde1a51186a1e0307"
+source = "git+https://github.com/VilotStar/unitedrust?branch=rdza#6ab26adf26fa9d6ad778cbb0db143e3ff51e3b1c"
 
 [[package]]
 name = "rouille"
 version = "0.1.0"
-source = "git+https://github.com/VilotStar/rouille#3f18a5de27982054f3e00993f85d4199466bafdc"
-dependencies = [
- "rouille_compilogenese",
-]
-
-[[package]]
-name = "rouille_compilogenese"
-version = "0.1.0"
-source = "git+https://github.com/VilotStar/rouille#3f18a5de27982054f3e00993f85d4199466bafdc"
+source = "git+https://github.com/VilotStar/unitedrust?branch=rouille#891511f3b455cb418cc7c40a0e41762c0ea30c59"
 
 [[package]]
 name = "sabi"
 version = "0.1.0"
-source = "git+https://github.com/VilotStar/sabi#0be46dfc0776af724ed05717c22c6421e870c070"
+source = "git+https://github.com/VilotStar/unitedrust?branch=sabi#bfe0e920e496e07bc5a8ecb2e4cd6c23e22dff15"

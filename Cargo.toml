@@ -4,6 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rouille = { git = "https://github.com/VilotStar/rouille" }
-sabi = { git = "https://github.com/VilotStar/sabi" }
-rdza = { git = "https://github.com/VilotStar/rdza" }
+sabi = { git = "https://github.com/VilotStar/unitedrust", branch = "sabi" }
+rouille = { git = "https://github.com/VilotStar/unitedrust", branch = "rouille" }
+rdza = { git = "https://github.com/VilotStar/unitedrust", branch = "rdza" }
